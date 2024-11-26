@@ -655,8 +655,12 @@ img.kunci{
 .end p{
     margin-left: 439px;
 }
-@media only screen and (max-width: 600px) {
+@media (max-width: 768px) {
     body {
-      background-color: lightblue;
+        font-size: 14px;
     }
-  }
+    .container {
+        padding: 10px;
+    }
+}
+
