@@ -658,11 +658,6 @@ img.kunci{
 .end p{
     margin-left: 439px;
 }
-@media only screen and (max-width: 600px) {
-    body {
-      background-color: lightblue;
-    }
-  }
   html, body {
     width: 100%;
     overflow-x: hidden; /* Mencegah scroll horizontal */
@@ -670,3 +665,104 @@ img.kunci{
 .box-all {
     flex-wrap: wrap; /* Agar kotak tidak melampaui layar */
 }
+@media only screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Navbar vertikal untuk layar kecil */
+        height: auto;
+        text-align: center;
+    }
+
+    .navbar img {
+        margin: 0 auto;
+    }
+
+    .navbar ul {
+        display: block;
+    }
+
+    .navbar ul li {
+        display: block; /* Elemen menu dalam baris baru */
+        margin: 10px 0;
+    }
+
+    .box-all {
+        flex-wrap: wrap; /* Agar kotak tidak melampaui layar */
+        justify-content: center; /* Rata tengah kotak */
+    }
+
+    .box1, .box2, .box3, .box4 {
+        width: 100%; /* Lebar kotak 100% dari layar */
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+    .row2 {
+        flex-direction: column; /* Baris diatur menjadi kolom */
+        text-align: center;
+    }
+
+    .pengumuman {
+        font-size: 12px; /* Kurangi ukuran teks */
+    }
+
+    .berita-utama {
+        flex-wrap: wrap; /* Agar berita tidak melampaui layar */
+        justify-content: center; /* Berita rata tengah */
+    }
+
+    .berita1, .berita2, .berita3, .berita4 {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .quotes {
+        background-position: center; /* Perbaiki posisi gambar */
+        font-size: 16px; /* Ukuran teks lebih kecil */
+        text-align: center;
+    }
+
+    .footer {
+        flex-direction: column; /* Footer vertikal */
+        text-align: center;
+    }
+
+    .alamat, .akhir, .tentang-kami {
+        margin: 0 auto;
+        width: 90%;
+    }
+
+    .end {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .end p {
+        margin-left: 0;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .navbar {
+        padding: 10px;
+    }
+
+    .box1, .box2, .box3, .box4 {
+        font-size: 14px; /* Sesuaikan ukuran teks */
+    }
+
+    .dosen {
+        flex-wrap: wrap; /* Agar dosen tampil berurutan vertikal */
+        gap: 20px;
+    }
+
+    .dosen1, .dosen2, .dosen3, .dosen4 {
+        width: 90%; /* Sesuaikan lebar untuk layar kecil */
+    }
+
+    .quotes, .video {
+        font-size: 14px;
+        height: auto;
+        padding: 20px;
+    }
+}
+
