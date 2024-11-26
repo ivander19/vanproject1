@@ -1,5 +1,6 @@
 *{
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 body{
@@ -33,6 +34,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 0 10px;
 }
 
 .navbar img{
@@ -78,10 +80,10 @@ body{
 }
 
 .box1, .box2 ,.box3, .box4{
-    width: 375px;
-    height: 375px;
-    padding: 10px;
-    font-size: 14px;
+    width: 311.6px;
+    height: 311.6px;
+    padding: 12px;
+    font-size: 15px;
     color: white;
 }
 
@@ -582,6 +584,7 @@ img.kunci{
     border-top: 1px solid rgb(68, 66, 66);
     margin-top: 80px;
     font-size: 13px;
+    text-align: center;
 }
 .tentang-kami p{
     opacity: 0.5;
@@ -655,12 +658,15 @@ img.kunci{
 .end p{
     margin-left: 439px;
 }
-@media (max-width: 768px) {
+@media only screen and (max-width: 600px) {
     body {
-        font-size: 14px;
+      background-color: lightblue;
     }
-    .container {
-        padding: 10px;
-    }
+  }
+  html, body {
+    width: 100%;
+    overflow-x: hidden; /* Mencegah scroll horizontal */
+}  
+.box-all {
+    flex-wrap: wrap; /* Agar kotak tidak melampaui layar */
 }
-
