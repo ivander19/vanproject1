@@ -1,251 +1,131 @@
-/* Reset Dasar */
+/* Reset dan dasar */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 body {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    width: 100%;
-    overflow-x: hidden; /* Mencegah scroll horizontal */
-    background-color: #f9f9f9; /* Warna latar belakang default */
-}
-
-.container {
-    width: 100%;
-    margin: auto;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 /* Navbar */
 .navbar {
-    background-image: linear-gradient(#130421, #4c4b4d 30%, #130421);
-    width: 100%;
-    height: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0 10px;
+    background: linear-gradient(to right, #130421, #4c4b4d);
+    padding: 10px 0;
 }
-
-.navbar img {
-    width: 100px; /* Disesuaikan untuk layar kecil */
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar .logo {
+    width: 120px;
     height: auto;
+}
+.navbar nav ul {
+    display: flex;
+    list-style-type: none;
+}
+.navbar nav ul li {
     margin-right: 20px;
 }
-
-.navbar ul {
-    display: flex;
-    list-style: none;
-    justify-content: center;
-    align-items: center;
-}
-
-.navbar ul li {
-    margin-right: 20px;
-}
-
-.navbar ul li a {
-    text-decoration: none;
-    color: white;
-    font-size: 14px;
-    padding: 5px 10px;
-    transition: color 0.3s;
-}
-
-.navbar ul li a:hover {
-    color: yellow;
-    cursor: pointer;
-}
-
-/* Navbar 2 */
-.navbar-2 {
-    width: 100%;
-    height: 40px;
-    background-color: rgba(11, 11, 11, 0.3);
-    color: white;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding: 0 20px;
-}
-
-.navbar-2 a {
+.navbar nav ul li a {
     color: white;
     text-decoration: none;
-    margin-left: 10px;
-    transition: color 0.3s;
-}
-
-.navbar-2 a:hover {
-    color: yellow;
-    cursor: pointer;
-}
-
-/* Kotak Utama */
-.box-all {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 10px;
-    gap: 10px;
-    padding: 10px;
-}
-
-.box1, .box2, .box3, .box4 {
-    width: 45%; /* Lebar responsif */
-    height: auto;
-    padding: 15px;
-    font-size: 15px;
-    color: white;
-    text-align: center;
-    border-radius: 10px;
-}
-
-.box1 { background-color: rgb(223, 223, 21); }
-.box2 { background-color: orange; }
-.box3 { background-color: rgb(173, 31, 121); }
-.box4 { background-color: rgb(125, 21, 55); }
-
-/* Pengumuman */
-.pengumuman {
-    margin: 20px auto;
-    text-align: center;
-    font-family: 'Lucida Sans', Geneva, Verdana, sans-serif;
-    color: #333;
-    font-size: 18px;
-}
-
-/* Berita Utama */
-.berita-utama {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-    padding: 20px;
-}
-
-.berita1, .berita2, .berita3, .berita4 {
-    width: 300px;
-    height: auto;
-    color: #333;
-    background-color: #f2f2f2;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-.berita1 a, .berita2 a, .berita3 a, .berita4 a {
-    text-decoration: none;
-    color: #333;
     font-size: 16px;
 }
+.navbar nav ul li a:hover {
+    color: yellow;
+}
 
-.berita1 a:hover, .berita2 a:hover, .berita3 a:hover, .berita4 a:hover {
-    color: red;
+/* Hero Section */
+.hero {
+    background-image: url('hero-image.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 40px;
+}
+.hero p {
+    font-size: 20px;
+}
+
+/* Features Section */
+.features {
+    background-color: #f4f4f4;
+    padding: 50px 0;
+}
+.features .container {
+    display: flex;
+    justify-content: space-between;
+}
+.feature-box {
+    background: #fff;
+    padding: 20px;
+    width: 30%;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.feature-box h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+.feature-box p {
+    font-size: 16px;
 }
 
 /* Footer */
 .footer {
-    width: 100%;
-    background-color: rgb(32, 31, 31);
+    background-color: #130421;
     color: white;
-    display: flex;
-    flex-wrap: wrap;
-    padding: 20px;
-}
-
-.footer .alamat {
-    flex: 1;
-    font-size: 13px;
-}
-
-.footer .alamat p {
-    margin-top: 10px;
-    color: rgba(255, 255, 255, 0.7);
-}
-
-.footer .form {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-}
-
-.footer .form input {
-    width: 90%;
-    padding: 10px;
-    background-color: #444;
-    border: none;
-    color: white;
-}
-
-.footer .form button {
-    width: 50%;
-    padding: 10px;
-    background-color: #333;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-
-.footer .form button:hover {
-    background-color: #555;
-}
-
-.footer .end {
-    width: 100%;
+    padding: 20px 0;
     text-align: center;
-    font-size: 13px;
-    margin-top: 20px;
-    color: rgba(255, 255, 255, 0.5);
 }
 
-/* Quotes */
-.quotes {
-    width: 100%;
-    height: auto;
-    padding: 20px;
-    background-color: rgba(18, 0, 92, 0.7);
-    text-align: center;
-    color: aliceblue;
-    font-weight: bold;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-size: 18px;
-}
-
-/* Media Queries */
-@media (max-width: 768px) {
-    .navbar {
-        flex-wrap: wrap;
-        height: auto;
+/* Responsivitas */
+@media only screen and (max-width: 768px) {
+    .navbar .container {
+        flex-direction: column;
+        align-items: flex-start;
     }
-    .navbar ul li a {
-        font-size: 12px;
+    .features .container {
+        flex-direction: column;
     }
-    .box1, .box2, .box3, .box4 {
-        width: 90%;
-    }
-    .berita1, .berita2, .berita3, .berita4 {
-        width: 90%;
-    }
-}
-
-@media (max-width: 480px) {
-    .navbar img {
-        width: 80px;
-    }
-    .navbar ul li a {
-        font-size: 10px;
-    }
-    .footer .form input {
+    .feature-box {
         width: 100%;
+        margin-bottom: 20px;
     }
-    .footer .form button {
-        width: 80%;
+    .hero h1 {
+        font-size: 30px;
+    }
+    .hero p {
+        font-size: 18px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .navbar nav ul {
+        flex-direction: column;
+    }
+    .navbar nav ul li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    .feature-box {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .hero h1 {
+        font-size: 24px;
+    }
+    .hero p {
+        font-size: 16px;
     }
 }
